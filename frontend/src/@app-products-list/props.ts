@@ -14,4 +14,5 @@ export type Props = PluginProps<{
   loadingProducts: boolean;
   fetchingProducts: boolean;
   products: Record<string, any>[];
+  paymentMethodId: string;
 }>;

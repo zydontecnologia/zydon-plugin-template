@@ -1,7 +1,8 @@
 import { Profile } from 'types/auth';
 import { AccessRequestStatus } from 'types/auth';
 
-const fakeImage = () => `https://picsum.photos/1024/1024?random=${Math.random()}`;
+const fakeImage = () =>
+  `https://picsum.photos/1024/1024?random=${Math.random()}`;
 
 export const authData = {
   id: '1',
@@ -350,7 +351,7 @@ export const products = [
     short_description: '',
     long_description: '',
     brand: null,
-    price: 0,
+    price: 5564,
     stock: 0,
     minimum_for_sale: null,
     multiple_for_sale: null,
@@ -464,6 +465,7 @@ export const mockData = {
     loadingProducts: false,
     fetchingProducts: false,
     products,
+    paymentMethodId: '1',
   },
   productsList: {
     primaryColor,
@@ -478,5 +480,18 @@ export const mockData = {
     loadingProducts: false,
     fetchingProducts: false,
     products,
+    paymentMethodId: '1',
+  },
+  productsListItem: {
+    primaryColor,
+    authData,
+    newOrder,
+    preOrderFormData: undefined,
+    checkoutFormData: undefined,
+    partnerId: '1',
+    partner: '1',
+    product: products[0],
+    paymentMethodId: '1',
+    appearance: 'TABLE' as const,
   },
 };
