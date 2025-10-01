@@ -15,6 +15,11 @@ const App = () => (
       appView={<AppPlugin />}
       checkoutView={<AppCheckout />}
       productDetailView={<AppProductDetail />}
+      newOrderView={<></>}
+      productDetailActionsView={<></>}
+      productsListView={<></>}
+      productsListItemView={<></>}
+      screenView={<></>}
     />
   </Common>
 );
