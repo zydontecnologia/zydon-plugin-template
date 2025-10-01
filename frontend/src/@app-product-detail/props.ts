@@ -11,5 +11,4 @@ export type Props = PluginProps<{
   partner: string; // Parceiro selecionado pelo usuário
   product: Record<string, any>;
   paymentMethodId: string;
-  appearance: 'TABLE' | 'LIST' | 'CARD';
 }>;

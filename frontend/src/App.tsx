@@ -6,6 +6,7 @@ import { mockData, primaryColor } from 'mocks/data-props';
 import AppPlugin from './@app/App';
 import AppNewOrderPlugin from './@app-new-order/App';
 import AppProductDetailPlugin from './@app-product-detail/App';
+import AppProductDetailActionsPlugin from './@app-product-detail-actions/App';
 import AppProductsListView from './@app-products-list/App';
 import AppProductsListItemView from './@app-products-list-item/App';
 import AppScreen from './@app-screen/App';
@@ -21,7 +22,9 @@ const App = () => (
       newOrderView={<AppNewOrderPlugin {...mockData.newOrder} />}
       checkoutView={<>Checkout View</>}
       productDetailView={<AppProductDetailPlugin {...mockData.productDetail} />}
-      productDetailActionsView={<>Product Detail Actions View</>}
+      productDetailActionsView={
+        <AppProductDetailActionsPlugin {...mockData.productDetailActions} />
+      }
       productsListView={<AppProductsListView {...mockData.productsList} />}
       productsListItemView={
         <AppProductsListItemView {...mockData.productsListItem} />
