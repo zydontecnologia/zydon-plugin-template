@@ -58,6 +58,14 @@ const appModes = {
     input: './src/@app-screen/_app.tsx',
     dir: 'dist/app-screen',
   },
+  search: {
+    input: './src/@app-search/_app.tsx',
+    dir: 'dist/app-search',
+  },
+  'product-search-results': {
+    input: './src/@app-product-search-results/_app.tsx',
+    dir: 'dist/app-product-search-results',
+  },
 };
 
 export default defineConfig(({ mode }) => {

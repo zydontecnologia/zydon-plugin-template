@@ -9,6 +9,7 @@ function createApp<P>(Component: React.ComponentType<P>) {
     constructor() {
       super();
       this.mountPoint = document.createElement('div');
+      this.mountPoint.style.width = '100%';
     }
 
     set props(v: Record<string, unknown>) {
