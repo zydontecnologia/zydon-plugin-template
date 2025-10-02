@@ -1,3 +1,3 @@
-export type AppProps = {
-  primaryColor?: string;
-} & Record<string, unknown>;
+import { PluginProps } from 'types/plugin';
+
+export type Props = PluginProps;

@@ -4,7 +4,6 @@ import { PluginProps } from 'types/plugin';
 
 export type Props = PluginProps<{
   authData: UserData;
-  product: Record<string, any>;
   newOrderId: string;
   paymentMethodId?: string;
   addressId?: string;

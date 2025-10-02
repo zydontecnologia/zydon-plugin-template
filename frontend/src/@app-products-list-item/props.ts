@@ -13,4 +13,5 @@ export type Props = PluginProps<{
   partner?: string; // Parceiro selecionado pelo usuário
   preOrderFormData?: Record<string, any>;
   checkoutFormData?: Record<string, any>;
+  appearance: 'TABLE' | 'LIST' | 'CARD';
 }>;
