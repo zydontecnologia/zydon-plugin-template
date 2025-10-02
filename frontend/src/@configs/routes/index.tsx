@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import loadable from '@zydon/common/utils/loadable';
 
 import Main from '@configs/layouts/Main';
-import { BASE_PATH } from 'configs/config-global';
+import { BASE_PATH } from 'constants/constants';
 
 const Home = loadable(lazy(() => import('@configs/views/Home')));
 const About = loadable(lazy(() => import('@configs/views/About')));

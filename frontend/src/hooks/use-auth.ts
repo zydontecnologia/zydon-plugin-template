@@ -1,6 +1,6 @@
 import { useAuth as useAuthentication } from '@zydon/auth';
 
-import { MODE } from 'configs/config-global';
+import { MODE } from 'constants/constants';
 
 const useAuth = () => {
   const authData = useAuthentication(MODE);

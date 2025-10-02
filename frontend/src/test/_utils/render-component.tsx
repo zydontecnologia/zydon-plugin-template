@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 
 import MUIInit from './mui-init';
 
-jest.mock('configs/config-global', () => ({
+jest.mock('constants/constants', () => ({
   APP_NAME: 'test',
   BASE_PATH: '/apps/test',
   MODE: 'test',
