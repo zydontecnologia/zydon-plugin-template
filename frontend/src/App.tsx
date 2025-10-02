@@ -10,6 +10,7 @@ import AppProductDetailActionsPlugin from './@app-product-detail-actions/App';
 import AppProductsListView from './@app-products-list/App';
 import AppProductsListItemView from './@app-products-list-item/App';
 import AppScreen from './@app-screen/App';
+import AppSearch from './@app-search/App';
 import Configs from './@configs/Configs';
 
 import '@zydon/common/styles.css';
@@ -30,6 +31,7 @@ const App = () => (
         <AppProductsListItemView {...mockData.productsListItem} />
       }
       screenView={<AppScreen {...mockData.appScreen} />}
+      centerHeader={<AppSearch {...mockData.appSearch} />}
     />
   </Common>
 );

@@ -608,4 +608,17 @@ export const mockData = {
     },
     paymentMethodId: '1',
   },
+  appSearch: {
+    primaryColor,
+    authData,
+    pathname: '/rota-atual-aqui',
+    newOrderId: 'newOrderId',
+    partnerId: 'partnerId',
+    partner: 'partner',
+    paymentMethodId: 'paymentMethodId',
+    addressId: 'addressId',
+    shoppingCartId: 'shoppingCartId',
+    preOrderFormData: {},
+    checkoutFormData: {},
+  },
 };
