@@ -641,4 +641,17 @@ export const mockPluginProps = {
     preOrderFormData: {},
     checkoutFormData: {},
   },
+  productSearchResults: {
+    primaryColor,
+    authData,
+    pathname: '/rota-atual-aqui',
+    newOrderId: 'newOrderId',
+    partnerId: 'partnerId',
+    partner: 'partner',
+    paymentMethodId: 'paymentMethodId',
+    addressId: 'addressId',
+    shoppingCartId: 'shoppingCartId',
+    preOrderFormData: {},
+    checkoutFormData: {},
+  },
 };

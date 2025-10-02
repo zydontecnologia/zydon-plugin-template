@@ -2407,10 +2407,10 @@
     sonner "^1.5.0"
     yet-another-react-lightbox "^3.21.4"
 
-"@zydon/plugin@^1.0.27":
-  version "1.0.27"
-  resolved "https://registry.yarnpkg.com/@zydon/plugin/-/plugin-1.0.27.tgz#a4020e5187c705ea1182dfb78174b8dadcfeb6f8"
-  integrity sha512-Tq09VPHPuKqqPHaQXDKJUvHe4aGvmTeLFPf+LeIacpZDdGX6kjg78WDPNrn7cAHyuZKdtApnf54h4lAFfjmsVQ==
+"@zydon/plugin@^1.0.29":
+  version "1.0.29"
+  resolved "https://registry.yarnpkg.com/@zydon/plugin/-/plugin-1.0.29.tgz#5466ed5d4f4d22f8323533e6324fd628871f4fef"
+  integrity sha512-lbKhmIZQIIcuUQuHdmyMiQ2S3hZj4OQRC+UuMNS3WSIn7PJsGZlTk4o+YYDiSYsRI0EH0S7/wytUmn/mRQwu7g==
 
 abab@^2.0.6:
   version "2.0.6"

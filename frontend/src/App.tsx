@@ -7,6 +7,7 @@ import AppPlugin from './@app/App';
 import AppNewOrderPlugin from './@app-new-order/App';
 import AppProductDetailPlugin from './@app-product-detail/App';
 import AppProductDetailActionsPlugin from './@app-product-detail-actions/App';
+import AppProductSearchResultsView from './@app-product-search-results/App';
 import AppProductsListView from './@app-products-list/App';
 import AppProductsListItemView from './@app-products-list-item/App';
 import AppScreen from './@app-screen/App';
@@ -38,6 +39,9 @@ const App = () => (
       }
       screenView={<AppScreen {...mockPluginProps.appScreen} />}
       centerHeader={<AppSearch {...mockPluginProps.appSearch} />}
+      productSearchResultsView={
+        <AppProductSearchResultsView {...mockPluginProps.productSearchResults} />
+      }
     />
   </Common>
 );
