@@ -13,12 +13,6 @@ const RouterSync = () => {
     const pathname = originalPathname.replace(router.basename || '', '');
     const newPath = search ? pathname + search : pathname;
 
-    // eslint-disable-next-line no-console
-    console.log({
-      newPath,
-      pathname,
-    });
-
     router.navigate(newPath || '/', { replace: true });
   }, [pathname]);
 
