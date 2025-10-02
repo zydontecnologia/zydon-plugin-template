@@ -2,10 +2,11 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import usePluginEvents from 'hooks/use-plugin-events';
+import { products } from 'mocks/data';
 
 import { Props } from './props';
 
-const Plugin = ({ products }: Props) => {
+const Plugin = ({ newOrderId }: Props) => {
   const { navigate } = usePluginEvents();
 
   return (
@@ -17,7 +18,7 @@ const Plugin = ({ products }: Props) => {
         letterSpacing={0.25}
         color="primary.main"
       >
-        Lista de Produtos customizada
+        Lista de Produtos customizada - Modelo de pedido: {newOrderId}
       </Typography>
 
       <Stack

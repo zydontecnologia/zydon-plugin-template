@@ -4,12 +4,14 @@ import { PluginProps } from 'types/plugin';
 
 export type Props = PluginProps<{
   authData: UserData;
-  newOrder: Record<string, any>;
+  product: Record<string, any>;
+  newOrderId: string;
+  paymentMethodId?: string;
+  addressId?: string;
+  shoppingCartId?: string;
+  partnerId?: string; // Parceiro selecionado no pré-pedido
+  partner?: string; // Parceiro selecionado pelo usuário
   preOrderFormData?: Record<string, any>;
   checkoutFormData?: Record<string, any>;
-  partnerId: string; // Parceiro selecionado no pré-pedido
-  partner: string; // Parceiro selecionado pelo usuário
-  product: Record<string, any>;
-  paymentMethodId: string;
   appearance: 'TABLE' | 'LIST' | 'CARD';
 }>;

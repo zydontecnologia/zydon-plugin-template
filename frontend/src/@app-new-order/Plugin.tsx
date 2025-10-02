@@ -6,6 +6,7 @@ import Icon from '@zydon/common/components/Icon';
 import Label from '@zydon/common/components/Label';
 
 import usePluginEvents from 'hooks/use-plugin-events';
+import { categories, products } from 'mocks/data';
 
 import { Props } from './props';
 
@@ -17,12 +18,7 @@ const getGreeting = () => {
   return 'Boa noite';
 };
 
-const Plugin = ({
-  authData,
-  products = [],
-  categories = [],
-  newOrder,
-}: Props) => {
+const Plugin = ({ authData, newOrderId }: Props) => {
   const greeting = getGreeting();
   const { navigate } = usePluginEvents();
 
@@ -81,10 +77,10 @@ const Plugin = ({
           component={Stack}
           direction="row"
           alignItems="center"
-          gap={1}
+          gap={0.5}
         >
-          Modelo de pedido: {newOrder.title}{' '}
-          <Label variant="inverted">{newOrder.id}</Label>
+          Modelo de pedido:
+          <Label variant="inverted">{newOrderId}</Label>
         </Typography>
       </Stack>
 
@@ -161,7 +157,12 @@ const Plugin = ({
                 zIndex={999}
                 overflow="hidden"
               >
-                <Typography variant="body2" noWrap align="center" fontWeight={700}>
+                <Typography
+                  variant="body2"
+                  noWrap
+                  align="center"
+                  fontWeight={700}
+                >
                   {product.name}
                 </Typography>
               </Stack>

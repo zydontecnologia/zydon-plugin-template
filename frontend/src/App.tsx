@@ -1,7 +1,7 @@
 import Common from '@zydon/common/components/Common';
 import Viewer from '@zydon/plugin/components/Viewer';
 
-import { mockData, primaryColor } from 'mocks/data-props';
+import { mockPluginProps, primaryColor } from 'mocks/data';
 
 import AppPlugin from './@app/App';
 import AppNewOrderPlugin from './@app-new-order/App';
@@ -19,19 +19,25 @@ const App = () => (
   <Common primaryColor={primaryColor}>
     <Viewer
       configView={<Configs />}
-      appView={<AppPlugin {...mockData.app} />}
-      newOrderView={<AppNewOrderPlugin {...mockData.newOrder} />}
+      appView={<AppPlugin {...mockPluginProps.app} />}
+      newOrderView={<AppNewOrderPlugin {...mockPluginProps.newOrder} />}
       checkoutView={<>Checkout View</>}
-      productDetailView={<AppProductDetailPlugin {...mockData.productDetail} />}
+      productDetailView={
+        <AppProductDetailPlugin {...mockPluginProps.productDetail} />
+      }
       productDetailActionsView={
-        <AppProductDetailActionsPlugin {...mockData.productDetailActions} />
+        <AppProductDetailActionsPlugin
+          {...mockPluginProps.productDetailActions}
+        />
       }
-      productsListView={<AppProductsListView {...mockData.productsList} />}
+      productsListView={
+        <AppProductsListView {...mockPluginProps.productsList} />
+      }
       productsListItemView={
-        <AppProductsListItemView {...mockData.productsListItem} />
+        <AppProductsListItemView {...mockPluginProps.productsListItem} />
       }
-      screenView={<AppScreen {...mockData.appScreen} />}
-      centerHeader={<AppSearch {...mockData.appSearch} />}
+      screenView={<AppScreen {...mockPluginProps.appScreen} />}
+      centerHeader={<AppSearch {...mockPluginProps.appSearch} />}
     />
   </Common>
 );
