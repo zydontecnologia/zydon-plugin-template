@@ -1,6 +1,8 @@
+import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Icon from '@zydon/common/components/Icon';
 import Label from '@zydon/common/components/Label';
@@ -18,12 +20,37 @@ const getGreeting = () => {
   return 'Boa noite';
 };
 
-const Plugin = ({ authData, newOrderId }: Props) => {
+const Plugin = ({ authData, newOrderId, ...other }: Props) => {
   const greeting = getGreeting();
   const { navigate } = usePluginEvents();
 
   return (
     <Stack gap={3}>
+      <Alert severity="warning">
+        🚀 Ponto de partida: aqui você vai implementar o plugin da{' '}
+        <strong>Tela de novo pedido</strong>.
+      </Alert>
+
+      <TextField
+        value={JSON.stringify({ authData, newOrderId, ...other }, null, 2)}
+        multiline
+        fullWidth
+        InputProps={{
+          style: {
+            fontFamily: 'monospace',
+            whiteSpace: 'pre',
+          },
+        }}
+        maxRows={8}
+        label="Dados que você receberá"
+      />
+
+      <Typography variant="overline" component="div" color="text.secondary">
+        Exemplo de como você pode usar os dados recebidos
+      </Typography>
+
+      <Divider sx={{ borderStyle: 'dashed' }} />
+
       <Stack>
         <Typography variant="h4" component="h1" fontWeight="400">
           {greeting},{' '}
