@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Icon from '@zydon/common/components/Icon';
 import Modal from '@zydon/common/components/Modal';
@@ -24,7 +25,7 @@ const Plugin = ({ pathname, authData }: Props) => {
           onClick={toggleModalOpen}
           startIcon={<Icon icon="IDEA" />}
         >
-          Botão do seu plugin
+          Aqui é o seu plugin global
         </Button>
       </Container>
 
@@ -36,47 +37,27 @@ const Plugin = ({ pathname, authData }: Props) => {
         dialogTitle="Modal"
       >
         <Stack gap={1}>
+          <TextField
+            value={JSON.stringify({ pathname, authData }, null, 2)}
+            multiline
+            fullWidth
+            InputProps={{
+              style: {
+                fontFamily: 'monospace',
+                whiteSpace: 'pre',
+              },
+            }}
+            maxRows={8}
+            label="Dados que você receberá"
+          />
+
+          <Divider sx={{ borderStyle: 'dashed' }} />
+
           <Typography variant="subtitle1" component="div">
-            Qualquer conteúdo que vc seja no seu plugin...
+            Qualquer conteúdo que vc deseja ter no seu plugin...
           </Typography>
 
-          <Divider sx={{ borderStyle: 'dashed' }} />
-
-          <Typography variant="overline" component="div" fontSize={14}>
-            Informações
-          </Typography>
-
-          <Typography variant="body1" component="div">
-            Rota atual:{' '}
-            <Typography component="strong" fontWeight={700}>
-              {pathname}
-            </Typography>
-          </Typography>
-
-          <Typography variant="body1" component="div">
-            Nome do usuário:{' '}
-            <Typography component="strong" fontWeight={700}>
-              {authData?.name || '-'}
-            </Typography>
-          </Typography>
-
-          <Typography variant="body1" component="div">
-            Email do usuário:{' '}
-            <Typography component="strong" fontWeight={700}>
-              {authData?.email || '-'}
-            </Typography>
-          </Typography>
-
-          <Typography variant="body1" component="div">
-            Perfil:{' '}
-            <Typography component="strong" fontWeight={700}>
-              {authData?.profile || '-'}
-            </Typography>
-          </Typography>
-
-          <Divider sx={{ borderStyle: 'dashed' }} />
-
-          <Stack direction="row" gap={1} pt={2}>
+          <Stack direction="row" gap={1} pt={1}>
             <Button
               variant="contained"
               size="large"

@@ -5,7 +5,7 @@ export const Container = styled('div')({
   height: 48,
   top: 0,
   bottom: 0,
-  right: -74,
+  right: -95,
   margin: 'auto',
   transform: 'rotate(90deg)',
 
