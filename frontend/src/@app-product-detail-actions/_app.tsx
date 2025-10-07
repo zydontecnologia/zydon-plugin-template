@@ -1,7 +1,5 @@
 import { buildPlugin } from 'utils/plugin';
 
-import packageJson from '../../package.json';
-
 import App from './App';
 
-buildPlugin(App, `${packageJson.name}-product-detail-actions`);
+buildPlugin(App, 'product-detail-actions');

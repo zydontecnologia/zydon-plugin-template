@@ -1,5 +1,7 @@
 import ReactDOM from 'react-dom/client';
 
+import packageJson from '../../package.json';
+
 function createApp<P>(Component: React.ComponentType<P>) {
   return class ReactElement extends HTMLElement {
     private mountPoint: HTMLDivElement;
@@ -52,8 +54,10 @@ function createApp<P>(Component: React.ComponentType<P>) {
 
 export function buildPlugin<P>(
   Component: React.ComponentType<P>,
-  tagName: string,
+  name: string,
 ) {
+  const tagName = `plugin-${name}-${packageJson.name}`;
+
   if (!customElements.get(tagName)) {
     const Element = createApp(Component);
     customElements.define(tagName, Element);
