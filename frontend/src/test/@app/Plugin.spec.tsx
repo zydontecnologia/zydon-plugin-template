@@ -10,7 +10,7 @@ describe('Plugin', () => {
     const { getByText } = render(<Plugin {...mockPluginProps.app} />);
 
     await waitFor(() => {
-      expect(getByText('Botão do seu plugin')).toBeInTheDocument();
+      expect(getByText('Aqui é o seu plugin global')).toBeInTheDocument();
     });
   });
 });
