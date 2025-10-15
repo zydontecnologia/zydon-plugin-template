@@ -33,7 +33,7 @@
     "@mui/x-data-grid-premium": "7.14.0",
     "@mui/x-date-pickers-pro": "7.14.0",
     "@zydon/auth": "^2.0.7",
-    "@zydon/common": "^2.6.33",
+    "@zydon/common": "^2.6.93",
     "@zydon/plugin": "^1.0.34",
     "jest-fetch-mock": "^3.0.3",
     "react": "^18.3.1",

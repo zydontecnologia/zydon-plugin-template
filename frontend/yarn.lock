@@ -2379,10 +2379,10 @@
     mitt "^3.0.1"
     universal-cookie "^7.2.0"
 
-"@zydon/common@^2.6.33":
-  version "2.6.33"
-  resolved "https://registry.yarnpkg.com/@zydon/common/-/common-2.6.33.tgz#9fc6d7002d75b1b350508fbc3f6b926cf5f92c3d"
-  integrity sha512-hC6B2gSWqyJAyLrV1Ff6xutHcY3I5kr3H+WblveAPn5NCwiCi2fzYz0nOTPUW/GhA1MWfoce0XRNVIB5+9O1fw==
+"@zydon/common@^2.6.93":
+  version "2.6.93"
+  resolved "https://registry.yarnpkg.com/@zydon/common/-/common-2.6.93.tgz#30432a8d4991879a62d409756bf530a2ce397c4c"
+  integrity sha512-/Q+AtqM+SUhKbji2tgIiDEzkQoJOaCTmBwsKGxNPkbJmGcLGDk4XyvDdli6EIynwDnfOVxiwdnQz2S4eeW7Jzw==
   dependencies:
     "@dnd-kit/core" "^6.3.1"
     "@dnd-kit/modifiers" "^9.0.0"
@@ -2395,6 +2395,7 @@
     embla-carousel-react "^8.2.0"
     framer-motion "^11.3.30"
     hugeicons-react "^0.3.0"
+    lodash "^4.17.21"
     react-color "^2.19.3"
     react-cropper "^2.3.3"
     react-dropzone "^14.2.3"
