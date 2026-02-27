@@ -5,6 +5,8 @@ import { mockPluginProps, primaryColor } from 'mocks/data';
 
 import AppPlugin from './@app/App';
 import AppNewOrderPlugin from './@app-new-order/App';
+import AppNewOrderPartnerPlugin from './@app-new-order-partner/App';
+import AppNewOrderSellerPlugin from './@app-new-order-seller/App';
 import AppProductDetailPlugin from './@app-product-detail/App';
 import AppProductDetailActionsPlugin from './@app-product-detail-actions/App';
 import AppProductSearchResultsView from './@app-product-search-results/App';
@@ -22,6 +24,12 @@ const App = () => (
       configView={<Configs />}
       appView={<AppPlugin {...mockPluginProps.app} />}
       newOrderView={<AppNewOrderPlugin {...mockPluginProps.newOrder} />}
+      newOrderPartnerView={
+        <AppNewOrderPartnerPlugin {...mockPluginProps.newOrder} />
+      }
+      newOrderSellerView={
+        <AppNewOrderSellerPlugin {...mockPluginProps.newOrder} />
+      }
       checkoutView={<>Checkout View</>}
       productDetailView={
         <AppProductDetailPlugin {...mockPluginProps.productDetail} />
@@ -40,7 +48,9 @@ const App = () => (
       screenView={<AppScreen {...mockPluginProps.appScreen} />}
       centerHeader={<AppSearch {...mockPluginProps.appSearch} />}
       productSearchResultsView={
-        <AppProductSearchResultsView {...mockPluginProps.productSearchResults} />
+        <AppProductSearchResultsView
+          {...mockPluginProps.productSearchResults}
+        />
       }
     />
   </Common>

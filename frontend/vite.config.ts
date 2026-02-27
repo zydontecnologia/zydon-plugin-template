@@ -38,6 +38,14 @@ const appModes = {
     input: './src/@app-new-order/_app.tsx',
     dir: 'dist/app-new-order',
   },
+  'new-order-partner': {
+    input: './src/@app-new-order-partner/_app.tsx',
+    dir: 'dist/app-new-order-partner',
+  },
+  'new-order-seller': {
+    input: './src/@app-new-order-seller/_app.tsx',
+    dir: 'dist/app-new-order-seller',
+  },
   'product-detail': {
     input: './src/@app-product-detail/_app.tsx',
     dir: 'dist/app-product-detail',
