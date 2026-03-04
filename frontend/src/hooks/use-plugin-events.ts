@@ -20,7 +20,9 @@ const usePluginEvents = () => {
 
   const logout = () => emit('LOGOUT');
 
-  return { emit, listen, navigate, refreshToken, logout };
+  const openQuickOrder = () => emit('OPEN_QUICK_ORDER');
+
+  return { emit, listen, navigate, refreshToken, logout, openQuickOrder };
 };
 
 export default usePluginEvents;
