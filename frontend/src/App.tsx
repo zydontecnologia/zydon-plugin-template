@@ -4,6 +4,9 @@ import Viewer from '@zydon/plugin/components/Viewer';
 import { mockPluginProps, primaryColor } from 'mocks/data';
 
 import AppPlugin from './@app/App';
+import AppCheckout from './@app-checkout/App';
+import AppCheckoutPartnerPlugin from './@app-checkout-partner/App';
+import AppCheckoutSellerPlugin from './@app-checkout-seller/App';
 import AppNewOrderPlugin from './@app-new-order/App';
 import AppNewOrderPartnerPlugin from './@app-new-order-partner/App';
 import AppNewOrderSellerPlugin from './@app-new-order-seller/App';
@@ -30,7 +33,13 @@ const App = () => (
       newOrderSellerView={
         <AppNewOrderSellerPlugin {...mockPluginProps.newOrder} />
       }
-      checkoutView={<>Checkout View</>}
+      checkoutView={<AppCheckout {...mockPluginProps.checkout} />}
+      checkoutPartnerView={
+        <AppCheckoutPartnerPlugin {...mockPluginProps.checkout} />
+      }
+      checkoutSellerView={
+        <AppCheckoutSellerPlugin {...mockPluginProps.checkout} />
+      }
       productDetailView={
         <AppProductDetailPlugin {...mockPluginProps.productDetail} />
       }

@@ -34,6 +34,14 @@ const appModes = {
     input: './src/@app-checkout/_app.tsx',
     dir: 'dist/app-checkout',
   },
+  'checkout-partner': {
+    input: './src/@app-checkout-partner/_app.tsx',
+    dir: 'dist/app-checkout-partner',
+  },
+  'checkout-seller': {
+    input: './src/@app-checkout-seller/_app.tsx',
+    dir: 'dist/app-checkout-seller',
+  },
   'new-order': {
     input: './src/@app-new-order/_app.tsx',
     dir: 'dist/app-new-order',
@@ -77,8 +85,8 @@ const appModes = {
 };
 
 export default defineConfig(({ mode }) => {
-  if (appModes[mode]) {
-    const { input, dir } = appModes[mode];
+  if (mode in appModes) {
+    const { input, dir } = appModes[mode as keyof typeof appModes];
 
     return buildPlugin(input, dir);
   }

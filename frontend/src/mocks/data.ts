@@ -468,6 +468,22 @@ export const mockPluginProps = {
     },
     checkoutFormData: undefined,
   },
+  checkout: {
+    primaryColor,
+    authData,
+    newOrderId: '123456789',
+    paymentMethodId: '1',
+    addressId: '1',
+    shoppingCartId: '1',
+    partnerId: '1',
+    partner: '1',
+    preOrderFormData: {
+      name: 'John Doe',
+      email: 'john.doe@example.com',
+      phone: '123456789',
+    },
+    checkoutFormData: undefined,
+  },
   productsList: {
     primaryColor,
     authData,
