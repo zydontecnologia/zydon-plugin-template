@@ -1,4 +1,4 @@
-import { Events } from 'types/plugin';
+import { Events, SwapToken } from 'types/plugin';
 
 /**
  * Hook para comunicação bidirecional entre plugin e aplicação host via CustomEvents.
@@ -56,7 +56,7 @@ const usePluginEvents = () => {
    * @example
    * ```ts
    * const session = await refreshToken();
-   * console.log(session?.token);
+   * console.log(session?.accessToken);
    * ```
    */
   const refreshToken = (): Promise<unknown> =>
@@ -70,7 +70,65 @@ const usePluginEvents = () => {
   /** Solicita abertura do pedido rápido na aplicação host. */
   const openQuickOrder = () => emit('OPEN_QUICK_ORDER');
 
-  return { emit, listen, navigate, refreshToken, logout, openQuickOrder };
+  /**
+   * Solicita swap de dados do token à aplicação host.
+   *
+   * @param params - Dados para swap (partnerId, newOrderId, paymentMethodId).
+   * @param update - Se deve atualizar a sessão no Redux (default: true).
+   * @returns Promise com o objeto de sessão atualizado pela host.
+   */
+  const swapData = (params: SwapToken, update?: boolean): Promise<unknown> =>
+    new Promise((resolve, reject) => {
+      emit('SWAP_DATA', {
+        ...params,
+        update,
+        onSuccess: resolve,
+        onError: reject,
+      });
+    });
+
+  /**
+   * Solicita swap de modelo de pedido à aplicação host.
+   *
+   * @param id - ID do modelo de pedido.
+   */
+  const swapNewOrder = (id: string): Promise<unknown> =>
+    new Promise((resolve, reject) => {
+      emit('SWAP_NEW_ORDER', { id, onSuccess: resolve, onError: reject });
+    });
+
+  /**
+   * Solicita swap de parceiro/cliente à aplicação host.
+   *
+   * @param id - ID do parceiro.
+   */
+  const swapPartner = (id: string): Promise<unknown> =>
+    new Promise((resolve, reject) => {
+      emit('SWAP_PARTNER', { id, onSuccess: resolve, onError: reject });
+    });
+
+  /**
+   * Solicita swap de forma de pagamento à aplicação host.
+   *
+   * @param id - ID da forma de pagamento.
+   */
+  const swapPaymentMethod = (id: string): Promise<unknown> =>
+    new Promise((resolve, reject) => {
+      emit('SWAP_PAYMENT_METHOD', { id, onSuccess: resolve, onError: reject });
+    });
+
+  return {
+    emit,
+    listen,
+    navigate,
+    refreshToken,
+    logout,
+    openQuickOrder,
+    swapData,
+    swapNewOrder,
+    swapPartner,
+    swapPaymentMethod,
+  };
 };
 
 export default usePluginEvents;
