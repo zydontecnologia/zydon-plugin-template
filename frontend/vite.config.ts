@@ -82,6 +82,10 @@ const appModes = {
     input: './src/@app-product-search-results/_app.tsx',
     dir: 'dist/app-product-search-results',
   },
+  'order-delivery-card': {
+    input: './src/@app-order-delivery-card/_app.tsx',
+    dir: 'dist/app-order-delivery-card',
+  },
 };
 
 export default defineConfig(({ mode }) => {
@@ -104,6 +108,8 @@ export default defineConfig(({ mode }) => {
         filename: 'remoteEntry.js',
         exposes: {
           './Configs': './src/@configs/Configs.tsx',
+          './OrderDeliveryCard':
+            './src/@configs/components/OrderDeliveryCard/index.tsx',
         },
         shared: [
           'react',

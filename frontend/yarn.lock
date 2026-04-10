@@ -1315,6 +1315,16 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.10.tgz#a2a1e3812d14525f725d011a73eceb41fef5bc1c"
   integrity sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==
 
+"@hugeicons/core-free-icons@^3.1.1":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@hugeicons/core-free-icons/-/core-free-icons-3.3.0.tgz#48be8d9a38a6a4192ef340d7a9ff238597567080"
+  integrity sha512-qYyr4JQ2eQIHTSTbITvnJvs6ERNK64D9gpwZnf2IyuG0exzqfyABLO/oTB71FB3RZPfu1GbwycdiGSo46apjMQ==
+
+"@hugeicons/react@^1.1.4":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@hugeicons/react/-/react-1.1.6.tgz#18482015b150d8559f0c45a4303286ccb287d9f5"
+  integrity sha512-c2LhXJMAW5wN1pC/smBXG0YPqUON6ceR/ZdXHCjEI9KvB+hjtqYjmzIxok5hAQOeXGz0WtORgCQMzqewFKAZwg==
+
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.13.0.tgz#fb907624df3256d04b9aa2df50d7aa97ec648748"
@@ -2379,14 +2389,16 @@
     mitt "^3.0.1"
     universal-cookie "^7.2.0"
 
-"@zydon/common@^2.6.93":
-  version "2.6.93"
-  resolved "https://registry.yarnpkg.com/@zydon/common/-/common-2.6.93.tgz#30432a8d4991879a62d409756bf530a2ce397c4c"
-  integrity sha512-/Q+AtqM+SUhKbji2tgIiDEzkQoJOaCTmBwsKGxNPkbJmGcLGDk4XyvDdli6EIynwDnfOVxiwdnQz2S4eeW7Jzw==
+"@zydon/common@^2.8.77":
+  version "2.8.77"
+  resolved "https://registry.yarnpkg.com/@zydon/common/-/common-2.8.77.tgz#8f72cda9ffa5431c3a2d7309ace1909ae2a5a4fa"
+  integrity sha512-aAGFl49UBDChjouAn0/AUbH9qobwY/y/vepChn9d11ner54xs1S6SOJpVZBzzhbICeZryrxXLnjVWwVajjkozg==
   dependencies:
+    "@dnd-kit/accessibility" "^3.1.1"
     "@dnd-kit/core" "^6.3.1"
     "@dnd-kit/modifiers" "^9.0.0"
     "@dnd-kit/sortable" "^10.0.0"
+    "@dnd-kit/utilities" "^3.2.2"
     browser-image-compression "^2.0.2"
     card-validator "^10.0.3"
     color "^4.2.3"
@@ -2394,7 +2406,8 @@
     embla-carousel "^8.2.0"
     embla-carousel-react "^8.2.0"
     framer-motion "^11.3.30"
-    hugeicons-react "^0.3.0"
+    hugeicons-react "0.4.0"
+    invariant "^2.2.4"
     lodash "^4.17.21"
     react-color "^2.19.3"
     react-cropper "^2.3.3"
@@ -2408,10 +2421,10 @@
     sonner "^1.5.0"
     yet-another-react-lightbox "^3.21.4"
 
-"@zydon/plugin@^1.0.38":
-  version "1.0.38"
-  resolved "https://registry.yarnpkg.com/@zydon/plugin/-/plugin-1.0.38.tgz#7857fe993b4df443fd337656cc84e6f369cd8e3b"
-  integrity sha512-iGXxc2Jo6NhytFZdoPYUXnhZosywRoTjY7b3BbwjtOHwwVceilp4CVoeLEyq6yV0cTjP/YkyS6SfkHZQvqhcHA==
+"@zydon/plugin@^1.0.39":
+  version "1.0.39"
+  resolved "https://registry.yarnpkg.com/@zydon/plugin/-/plugin-1.0.39.tgz#2f4703463cb5ce7afdf9736f2930306d088b29fb"
+  integrity sha512-J3OIgebORXwqXpEZG2XLvTWh5pxuWA3hQmHjVWo0dbH8Y4ob3dhHD31bKX7F9ILmRfkJmjxUxin/u2KHmjwoLA==
 
 abab@^2.0.6:
   version "2.0.6"
@@ -4202,10 +4215,13 @@ https-proxy-agent@^5.0.1:
     agent-base "6"
     debug "4"
 
-hugeicons-react@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/hugeicons-react/-/hugeicons-react-0.3.0.tgz#a788db21b116f16062b75ccf3a3633575722ec9f"
-  integrity sha512-znmC+uX7xVqcIs0q09LvwEvJkjX0U3xgT05BSiRV19farS4lPONOKjYT0JkcQG5cvfV0rXHSEAEVNjbHAu81rg==
+hugeicons-react@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/hugeicons-react/-/hugeicons-react-0.4.0.tgz#269835bdfa42ba2bd65208065722ffdf4d6c3771"
+  integrity sha512-HA2UI3VkDd1dNi9P4JGjaMODdGEs4QVMwQcc34W0aoGHptdsIex/756Jik4GFYN/023jGFKNVvQKhx2IpZtV+g==
+  dependencies:
+    "@hugeicons/core-free-icons" "^3.1.1"
+    "@hugeicons/react" "^1.1.4"
 
 human-signals@^2.1.0:
   version "2.1.0"
@@ -4288,6 +4304,13 @@ internal-slot@^1.1.0:
     es-errors "^1.3.0"
     hasown "^2.0.2"
     side-channel "^1.1.0"
+
+invariant@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
+  integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
+  dependencies:
+    loose-envify "^1.0.0"
 
 is-array-buffer@^3.0.4, is-array-buffer@^3.0.5:
   version "3.0.5"
@@ -5237,7 +5260,7 @@ lodash@^4.0.1, lodash@^4.17.15, lodash@^4.17.21:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
-loose-envify@^1.1.0, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
