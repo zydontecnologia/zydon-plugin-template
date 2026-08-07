@@ -1,0 +1,11 @@
+- id: ""
+  name: ""
+  execution_type: ""
+  flows:
+    - id: ""
+      name: ""
+      actions:
+        - id: ""
+          name: ""
+          type: ""
+          webhook_id: ""
